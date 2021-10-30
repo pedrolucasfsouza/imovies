@@ -16,8 +16,8 @@ ul{
     list-style: none;
     flex-direction: row;
     display: flex;
-    width: 1000px;
-    justify-content: space-between;
+    width: 700px;
+    justify-content: space-around;
     
 }
 

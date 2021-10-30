@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
     :root {
     --text-title: #9FA2B4;
-    --background: #FF0050;
+    --background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(255,28,28,1) 0%, rgba(255,86,86,1) 0%);
     --bg-page: #F4F4F4;
 
     --menu: white;
@@ -35,6 +35,18 @@ export const GlobalStyle = createGlobalStyle`
     }
     h1, h2, h3, h4, h5, h6, strong{
         font-weight: 600;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.95rem;
     }
 
     `
