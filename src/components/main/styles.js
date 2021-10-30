@@ -34,3 +34,23 @@ h1, h3, p{
 }
 `
 
+export const ContainerModal = styled.div `
+
+
+
+      button:hover{
+          filter: brightness(0.9)
+      }
+`
+
+export const HeaderModal = styled.header`
+background-color: orange;
+width: 100%;
+height: 100px;
+position: absolute;
+top: 0;
+right: 0;
+z-index:0;
+border-radius: 1rem 0rem 0rem 0rem;
+`
+

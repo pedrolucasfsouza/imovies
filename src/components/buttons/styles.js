@@ -19,7 +19,7 @@ flex-direction: row;
 
 button{
       padding: 1.5rem 3rem;
-      height: 4rem;
+      height: 4.2rem;
       background-color: white;
       color:black;
       border: 0;
