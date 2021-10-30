@@ -1,12 +1,30 @@
-import { Container, Content, Button } from './styles'
+import { Container, Content, RadioBox } from './styles'
+import nolike from "../../assets/images/n-curti.png"
+import like from "../../assets/images/curti.png"
 
 export default function Buttons() {
 return(
     <Container>
         <Content>
-        <buton type="button">NÃO CURTI!</buton>
-        <buton type="button">PULAR</buton>
-        <buton type="button">CURTI!</buton>
+            <RadioBox
+             type="button">
+                <img src={nolike}></img>
+                <span>NÃO CURTI!</span>
+            </RadioBox>
+
+            <RadioBox
+             type="button">
+                 
+                <span className="pular">PULAR</span>
+            </RadioBox>
+
+            <RadioBox
+             type="button">
+                <img src={like}></img>
+                <span>CURTI!</span>
+            </RadioBox>
+
+
         </Content>
     </Container>
 )
