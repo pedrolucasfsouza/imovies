@@ -1,12 +1,13 @@
 
-import './App.css';
+import { GlobalStyle } from "./styles/global";
+import Header  from './components/header/index'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-<h1>home</h1>
-      </header>
+<Header></Header>
+
+<GlobalStyle></GlobalStyle>
     </div>
   );
 }
