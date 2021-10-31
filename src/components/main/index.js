@@ -28,14 +28,17 @@ export default function Main() {
 return(
     <>
     <Container>
+
         <Content style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w780/'+movies.backdrop_path})`}}>
             <ContentInfo>
-                <h1>{movies.original_title}</h1>
+                <h1>{movies.original_title && movies.original_title.toUpperCase() }</h1>
                 <h3>{movies.release_date} - {movies.runtime} minutos</h3>
-                <p>{movies.overview}</p>
+                <p>{movies.overview && movies.overview.substr(0,100)}</p>
                 <button type="button" onClick={handleOpenNewTransactionModal}>Detalhes do Filme</button>
             </ContentInfo>
         </Content>
+
+        
     </Container>
 
     <Modal isOpen={isNewTransactionModalOpen}

@@ -6,7 +6,7 @@ return(
     <Container>
         <ul>
     <li><a href="/">FILMES NÃO CURADOS</a></li>
-    <li><a href="/">FILMES CURTIDOS</a></li>
+    <li><a href="/liked">FILMES CURTIDOS</a></li>
     <li><a href="/">FILMES NÃO CURTIDOS</a></li>
     </ul>
 
