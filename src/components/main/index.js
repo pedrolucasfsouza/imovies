@@ -6,27 +6,16 @@ import capa from '../../assets/images/capa.jpg'
 import { Container, Content, ContentInfo, ContainerModal, HeaderModal, Capa, InfoModal, InfoModalContent } from './styles'
 import api from "../../api"
 
+import {GlobalContext} from '../../context/GlobalContext'
+
 Modal.setAppElement('#root')
 
 
 export default function Main() {
+    const {randomId,movies, setMovies, erro, setErro} = React.useContext(GlobalContext)
 
-    const [movies, setMovies] = useState([])
     const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
     
-    useEffect(() =>{
-        const id = 550;
-        api.get('/'+id+'?api_key=8baeb5a44370913e7186e6d238a3d021')
-        .then(res => {
-          setMovies(res.data)
-        })
-        .catch (err =>{
-        })
-      },[])
-      console.log(movies)
-
-      
-
       function handleOpenNewTransactionModal(){
           setIsNewTransactionModalOpen(true);
       }
@@ -39,13 +28,13 @@ export default function Main() {
 return(
     <>
     <Container>
-        <Content>
-        <ContentInfo>
-            <h1>WONDER WOMAN</h1>
-            <h3>2017 - FANTASY/SCIENCE FICTION FILME - 2H 21M</h3>
-            <p>Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an un</p>
-            <button type="button" onClick={handleOpenNewTransactionModal}>Detalhes do Filme</button>
-        </ContentInfo>
+        <Content style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w780/'+movies.backdrop_path})`}}>
+            <ContentInfo>
+                <h1>{movies.original_title}</h1>
+                <h3>{movies.release_date} - {movies.runtime} minutos</h3>
+                <p>{movies.overview}</p>
+                <button type="button" onClick={handleOpenNewTransactionModal}>Detalhes do Filme</button>
+            </ContentInfo>
         </Content>
     </Container>
 
@@ -60,12 +49,12 @@ return(
         
         <ContainerModal>
         <HeaderModal></HeaderModal>
-        <Capa><img src={capa}></img></Capa>
+        <Capa><img src={'https://image.tmdb.org/t/p/w185/'+movies.poster_path}></img></Capa>
         <InfoModal>
             <InfoModalContent>
-                <h1>CLUBE DA LUTA</h1>
-                <h3>2017 - FANTASY/SCIENCE FICTION FILME - 2H 21M</h3>
-                <p>Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an un Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an un Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an un</p>
+                <h1>{movies.original_title}</h1>
+                <h3>{movies.release_date} - {movies.runtime} minutos</h3>
+                <p>{movies.overview}</p>
             </InfoModalContent>
         </InfoModal>
         

@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 
 export const Container = styled.header`
@@ -20,6 +21,7 @@ padding: 1rem;
 justify-content: flex-end;
 align-items: center;
 flex-direction:column;
+background-image: "https://image.tmdb.org/t/p/w185/";
 `
 
 export const ContentInfo = styled.header`

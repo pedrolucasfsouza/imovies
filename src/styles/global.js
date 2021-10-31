@@ -39,14 +39,17 @@ export const GlobalStyle = createGlobalStyle`
 
     h1{
         font-size: 1.5rem;
+        color: white;
     }
 
     h3{
         font-weight: 600;
         font-size: 1rem;
+        color: white;
     }
     p{
         font-size: 0.95rem;
+        color: white;
     }
 
 .react-modal-overlay{
@@ -74,10 +77,15 @@ export const GlobalStyle = createGlobalStyle`
         
         h1 {
             margin: 1rem 0rem 1rem 0rem;
+            color: black;
         }
 
         h3{
             margin: 0.5rem 0rem 0.5rem 0rem;
+            color: black;
+        }
+        p{
+            color: black;
         }
         
     }
