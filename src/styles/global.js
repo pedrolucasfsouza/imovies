@@ -66,16 +66,20 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-content {
         width: 100%;
         max-width: 750px;
+        height: 500px;
         background: #F4F4F4;
         padding: 3rem;
         position: relative;
-        border-radius: 1rem 0rem 0rem 0rem;
+        border-radius: 1rem 1rem 1rem 1rem;
         
         h1 {
-            color: #aaa;
-            display: inline-block;
-            margin: 0rem 0rem 2rem 0rem;
+            margin: 1rem 0rem 1rem 0rem;
         }
+
+        h3{
+            margin: 0.5rem 0rem 0.5rem 0rem;
+        }
+        
     }
 
     .react-modal-close{

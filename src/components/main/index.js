@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal'
 import close from '../../assets/images/close.svg'
+import capa from '../../assets/images/capa.jpg'
 
-import { Container, Content, ContentInfo, ContainerModal, HeaderModal } from './styles'
+import { Container, Content, ContentInfo, ContainerModal, HeaderModal, Capa, InfoModal, InfoModalContent } from './styles'
 import api from "../../api"
 
 Modal.setAppElement('#root')
@@ -11,6 +12,7 @@ Modal.setAppElement('#root')
 export default function Main() {
 
     const [movies, setMovies] = useState([])
+    const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
     
     useEffect(() =>{
         const id = 550;
@@ -23,7 +25,7 @@ export default function Main() {
       },[])
       console.log(movies)
 
-      const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
+      
 
       function handleOpenNewTransactionModal(){
           setIsNewTransactionModalOpen(true);
@@ -58,8 +60,15 @@ return(
         
         <ContainerModal>
         <HeaderModal></HeaderModal>
-        <input
-        placeholder="ID Cliente"></input>
+        <Capa><img src={capa}></img></Capa>
+        <InfoModal>
+            <InfoModalContent>
+                <h1>CLUBE DA LUTA</h1>
+                <h3>2017 - FANTASY/SCIENCE FICTION FILME - 2H 21M</h3>
+                <p>Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an un Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an un Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an un</p>
+            </InfoModalContent>
+        </InfoModal>
+        
         </ContainerModal>
         </Modal>
 
