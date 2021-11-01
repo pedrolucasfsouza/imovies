@@ -25,30 +25,32 @@ function GlobalProvider({ children }) {
         })
       },[erro, liked, notliked])
 
+      const like_json = eval(localStorage.getItem('like')) // variável que armazena os filmes curtidos, porém em formato JSON
       // função que salva os filmes curtidos no state "liked"
-
       function handleLike(){
-        const index = liked.findIndex((movie) => (movie.id === movies.id))
+        const index = liked.findIndex((movie) => (movie.id === movies.id)) //caso o ID já existe, o filme não será adicionado novamente.
         if (index === -1){
-            if (liked){
-            setLiked([...liked, movies])
-            localStorage.setItem("like",JSON.stringify([...liked, movies]))}
+            const like_local = localStorage.getItem('like') // variavel que armazena os filmes curtidos no localstorage
+            if (like_local){
+            setLiked([...like_json, movies])
+            localStorage.setItem("like",JSON.stringify([...like_json, movies]))}
         else{
             setLiked(movies)
             localStorage.setItem("like",JSON.stringify([movies]))}
       }
     }
 
-    const like_json = eval(localStorage.getItem('like'))
-    console.log(like_json)
+    
+    const noliked_json = eval(localStorage.getItem('noliked')) // variável que armazena os filmes não curtidos, porém em formato JSON
 
     //função que salva os filmes NÃO CURTIDOS no state "noliked"
     function handleNotLike(){ 
         const index = notliked.findIndex((movie) => (movie.id === movies.id))
         if (index === -1){
-        if (notliked){
-            setNotLiked([...notliked, movies])
-            localStorage.setItem("noliked",JSON.stringify([...notliked, movies]))
+        const nolike_local = localStorage.getItem('noliked')
+        if (nolike_local){
+            setNotLiked([...noliked_json, movies])
+            localStorage.setItem("noliked",JSON.stringify([...noliked_json, movies]))
         }
         else{
             setNotLiked(movies)
@@ -56,7 +58,7 @@ function GlobalProvider({ children }) {
         }
       }
     }
-    const noliked_json = eval(localStorage.getItem('noliked'))
+    
 
     return (
 

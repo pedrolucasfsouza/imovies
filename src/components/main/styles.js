@@ -24,15 +24,20 @@ align-items: center;
 flex-direction:column;
 background-image: "https://image.tmdb.org/t/p/w185/";
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+position: relative;
 `
 
 export const ContentInfo = styled.header`
 display: flex;
 width: 100%;
-height: 120px;
 padding: 0.5rem;
 align-items: flex-start;
 flex-direction: column;
+background-color: rgba(0, 0, 0, 0.8);
+height: auto;
+position: absolute;
+bottom: 0;
+
 h1, h3, p{
     padding: 0.25rem 0px;
 }
