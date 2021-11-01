@@ -27,12 +27,12 @@ export default function Movie(props) {
 
 return(
     <>
-    <Container>
-            <Content style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w300//fklIyCfjBmxSoy3xBQbbuNBEHs0.jpg'})`}}>
-            <h1>{props.title}</h1>
-            <p>{props.sinopse}</p>
+
+            <Content style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w300/'+props.capa})`}}>
+            <h1>{props.title && props.title.toUpperCase()}</h1>
+            <p>{props.sinopse && props.sinopse.substr(0,50)}</p>
             </Content>
-    </Container>
+
 
 
     </>

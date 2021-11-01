@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 
-export const Container = styled.header`
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-flex-direction: row;
-margin-top: 50px;
-background: #f5f5f5;
-min-height: 650px;
-`
 
 export const Content = styled.header`
 display: flex;
@@ -24,7 +14,7 @@ justify-content: flex-end;
 align-items: flex-start;
 flex-direction:column;
 background-image: "https://image.tmdb.org/t/p/w185/";
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+margin: 5px;
 
 `
 

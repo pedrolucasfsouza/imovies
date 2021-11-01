@@ -5,6 +5,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
+height: 180px;
 flex-direction: column;
 margin-top: 50px;
 img{
