@@ -48,16 +48,19 @@ function GlobalProvider({ children }) {
         if (index === -1){
         if (notliked){
             setNotLiked([...notliked, movies])
+            localStorage.setItem("noliked",JSON.stringify([...notliked, movies]))
         }
         else{
             setNotLiked(movies)
+            localStorage.setItem("noliked",JSON.stringify([movies]))
         }
       }
     }
+    const noliked_json = eval(localStorage.getItem('noliked'))
 
     return (
 
-        <GlobalContext.Provider value={{randomId, movies, setMovies, erro, setErro, handleLike, handleNotLike, like_json}}>
+        <GlobalContext.Provider value={{randomId, movies, setMovies, erro, setErro, handleLike, handleNotLike, like_json, noliked_json}}>
 
             {children}
 

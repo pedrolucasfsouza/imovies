@@ -5,9 +5,9 @@ export default function Menu() {
 return(
     <Container>
         <ul>
-    <li><a href="/">FILMES NÃO CURADOS</a></li>
+    <li><a className="ncurado" href="/">FILMES NÃO CURADOS</a></li>
     <li><a href="/liked">FILMES CURTIDOS</a></li>
-    <li><a href="/">FILMES NÃO CURTIDOS</a></li>
+    <li><a href="/noliked">FILMES NÃO CURTIDOS</a></li>
     </ul>
 
     </Container>

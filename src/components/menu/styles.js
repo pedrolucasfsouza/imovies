@@ -27,5 +27,9 @@ a{
     color: var(--menu);
     font-size: 1.1rem;
 }
+
+a:active{
+    text-decoration: underline;
+}
 `
 

@@ -15,16 +15,26 @@ align-items: flex-start;
 flex-direction:column;
 background-image: "https://image.tmdb.org/t/p/w185/";
 margin: 5px;
+position: relative;
 
 `
 
 export const ContentInfo = styled.header`
 display: flex;
 width: 100%;
-height: 120px;
 padding: 0.5rem;
 align-items: flex-start;
 flex-direction: column;
+background-color: black;
+opacity: 80%;
+position: absolute;
+top: 100;
+right: 0;
+
+:hover{
+    opacity: 100%;
+}
+
 h1, h3, p{
     padding: 0.25rem 0px;
 }
