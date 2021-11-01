@@ -4,4 +4,5 @@ https://github.com/vivadecora/projeto-front-end-vivadecora-nao-fazer-fork
 
 # Tecnologias usadas
 ReactJS
-Styled-Components
+Styled-Components - para estilizar o app
+AXIOS - para realizar as requisições
